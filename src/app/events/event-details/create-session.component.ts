@@ -35,7 +35,6 @@ export class CreateSessionComponent implements OnInit {
     this.duration = new FormControl('', Validators.required)
     this.level = new FormControl('', Validators.required)
     this.abstract = new FormControl('', [Validators.required, Validators.maxLength(400), restrictedWords(['foo', 'bar'])])
-    console.log('​CreateSessionComponent -> ngOnInit -> restrictedWords', restrictedWords);
 
     this.newSessionForm = new FormGroup({
       name: this.name,
